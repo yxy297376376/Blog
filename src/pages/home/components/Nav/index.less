@@ -1,0 +1,31 @@
+.itemLink {
+  width: 100%;
+  border: 2px solid #dddddd;
+  box-sizing: border-box;
+  transition: border-color .3s;
+  margin-bottom: 1em;
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+  padding: 1.2em;
+
+  h2 {
+    font-size: 1.3em;
+    transition: color .3s;
+  }
+
+  h2,
+  p {
+    margin: 0.25em 0;
+  }
+
+  &:hover {
+    cursor: pointer;
+    border-color: #daa520;
+
+    h2 {
+      color: #daa520;
+    }
+
+  }
+}

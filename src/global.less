@@ -1,0 +1,158 @@
+@font-face {
+  font-family: HAIPAI;
+  src: url("./assets/fonts/HaiPaiQiangDiaoSenXiYuan-Shan\(ShanghaiFace-SenGBT-Flash\)-2.ttf");
+}
+
+@font-face {
+  font-family: HM;
+  src: url("./assets/fonts/HarmonyOS_Sans_SC_Medium.subset.woff2");
+}
+
+@font-face {
+  font-family: typewriterblack;
+  src: url("./assets/fonts/HarmonyOS_Sans_SC_Medium.subset.woff2");
+}
+
+@font-face {
+  font-family: NotoSerif;
+  src: url('http://rluot02vo.hd-bkt.clouddn.com/fonts/Stone-Serif-Sem-ITC-TT-Semi.ttf') format('woff2');
+  font-weight: 600;
+  font-size: 18px
+}
+
+@font-face {
+  font-family: ZCOOLXiaoWei;
+  src: url('http://rluot02vo.hd-bkt.clouddn.com/fonts/ZCOOLXiaoWei-Regular.ttf') format('woff2');
+}
+
+@import "~video-react/dist/video-react.css";
+
+:root {
+  --text-color: #333;
+  --text-gray: #999;
+  --light-bg: rgb(242, 242, 242);
+  --light-gray-bg: rgba(0, 0, 0, .05);
+  --gray-bg: rgba(0, 0, 0, .2);
+  --overlay-bg: rgba(255, 255, 255, .95);
+  --white-or-black: #fff;
+}
+
+
+// 谷歌、360、QQ浏览器————（ webkit 内核的浏览器 ）
+/*定义滚动条宽高及背景，宽高分别对应横竖滚动条的尺寸*/
+::-webkit-scrollbar {
+  width: 9px;
+}
+
+/*定义滚动条的轨道，内阴影及圆角*/
+::-webkit-scrollbar-track {
+  background-color: #ffffff;
+  border-radius: 19px;
+}
+
+/*定义滑块，内阴影及圆角*/
+::-webkit-scrollbar-thumb {
+  border-radius: 19px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+::-webkit-scrollbar-thumb:active {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+html,
+body,
+#root,
+section,
+div {
+  font-family: NotoSerif, typewriterblack !important;
+  --primaryColor: #daa520;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: NotoSerif, typewriterblack !important;
+  scroll-behavior: smooth;
+  word-break: break-all;
+}
+
+div,
+p,
+span,
+a,
+b,
+i,
+h1,
+h2,
+h3,
+label {
+  font-family: NotoSerif, typewriterblack !important;
+  box-sizing: border-box;
+  scroll-behavior: smooth
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+.ant-segmented,
+.ant-segmented .ant-segmented-item {
+  border-radius: 100vw;
+}
+
+.ant-spin {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content {
+  overflow-y: unset;
+  max-height: 98%;
+}
+
+.video-react .video-react-poster {
+  background-color: #fff;
+}
+
+// .video-react-controls-enabled {
+//   margin: 0 auto;
+// }
+.video-react .video-react-big-play-button {
+  font-size: 24px;
+  line-height: 45px;
+  height: 45px;
+  width: 45px;
+  border: 0.06666em solid rgba(43, 51, 63, 0.7);
+  border-radius: 50%;
+}
+
+.video-react .video-react-big-play-button.video-react-big-play-button-center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: 0;
+  margin-left: 0;
+}
+
+.video-react-control-bar {
+  background-color: #000 !important;
+}
+
+.aplayer-list-title,
+.aplayer-title {
+  color: #000;
+}
+
+.headerTitle {
+  // font-family: ZCOOLXiaoWei !important;
+  font-weight: 500;
+  font-size: 24px
+}

@@ -1,0 +1,45 @@
+@hoverColor: #daa520;
+
+.postText {
+  flex-grow: 1;
+  margin-bottom: 40px;
+
+  .title {
+    font-size: 1.2em;
+    margin: 0.5em 0;
+    font-weight: 500;
+    transition: color .3s;
+
+    &:hover {
+      color: @hoverColor;
+      cursor: pointer;
+    }
+  }
+
+  .meta {
+    margin-top: 0;
+    padding: 0;
+    font-size: .92857em;
+    display: flex;
+  }
+
+  .meta li:first-child {
+    margin-left: 0;
+    padding-left: 0;
+    border: none;
+  }
+
+  .meta li {
+    display: inline-block;
+    margin: 0 8px 0 0;
+    padding-left: 12px;
+    border-left: 1px solid #dddddd;
+    color: #999;
+  }
+
+  .content {
+    line-height: 1.5;
+    word-wrap: break-word;
+    color: #999;
+  }
+}
