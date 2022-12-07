@@ -1,7 +1,19 @@
-import React from "react";
+import PageTitle from "@/components/PageTitle";
+import React, { useEffect } from "react";
+import { withTranslation } from "react-i18next";
 
-const Message = () => {
-  return <div>message</div>
-}
+const Message = ({ t }) => {
+  return (
+    <div
+      style={{
+        width: "100%",
+        height: "calc(100vh - 16px)"
+        // backgroundColor: '#efefef'
+      }}
+    >
+      <PageTitle title={t("留言")} />
+    </div>
+  );
+};
 
-export default Message;
+export default withTranslation("translations")(Message);

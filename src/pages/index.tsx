@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import {
   SmileOutlined,
   FrownOutlined,
@@ -22,6 +22,7 @@ import { withTranslation } from "react-i18next";
 import "@/lang.js";
 import FastMarquee from "@/components/FastMarquee";
 import InfoCard from "@/components/InfoCard";
+import PageTitle from "@/components/PageTitle";
 
 type themeProps = number | string;
 
@@ -89,6 +90,7 @@ const App: React.FC = ({ children, t, ...rest }) => {
   const [currentPath, setCurrentPath] = useState("/home");
   const [pageLoading, setLoading] = useState(false);
   const [menuVisible, setMbMenuVisible] = useState(false);
+  const [hideTitle, setHideTitle] = useState(false);
 
   useEffect(() => {
     if (history.location.pathname == "/") {
@@ -110,7 +112,20 @@ const App: React.FC = ({ children, t, ...rest }) => {
     } else {
       localStorage.setItem("isMobile", "0");
     }
+
+    window.addEventListener("resize", function () {
+      if (window.innerWidth < 985) {
+        setHideTitle(true);
+      } else {
+        setHideTitle(false);
+      }
+    });
+    return window.removeEventListener("resize", function () {});
   }, []);
+
+  const onCurrentTitle = useMemo(() => {
+    return IconMapping.find(v => v.value == location.pathname)?.label;
+  }, [location.pathname]);
 
   const items2: MenuProps["items"] = [
     "/home",
@@ -191,7 +206,7 @@ const App: React.FC = ({ children, t, ...rest }) => {
             <ChangeLanguage />
           </div>
 
-          <div className="logo headerTitle">{t("杨舒Blog")}</div>
+          <div className="logo headerTitle">{t(onCurrentTitle)}</div>
           <div className={styles["flex"]}>
             <InfoCenter
               style={{
@@ -208,6 +223,7 @@ const App: React.FC = ({ children, t, ...rest }) => {
             />
           </div>
         </div>
+
         <Content style={{ position: "relative" }}>
           <Layout style={{ padding: "0px 0", minHeight: "100vh" }}>
             <Content className={styles["content"]}>
@@ -238,7 +254,15 @@ const App: React.FC = ({ children, t, ...rest }) => {
                     onChange={onChangeTheme}
                   />
                 </div>
-                <Spin spinning={pageLoading}>{children}</Spin>
+                <Spin spinning={pageLoading}>
+                  <PageTitle
+                    title={t(onCurrentTitle)}
+                    style={{
+                      display: hideTitle ? "none" : "block"
+                    }}
+                  />
+                  {children}
+                </Spin>
               </div>
 
               <div className={styles["rightContent"]}></div>
