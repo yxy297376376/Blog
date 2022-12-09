@@ -10,9 +10,7 @@ const Message = ({ t }) => {
         height: "calc(100vh - 16px)"
         // backgroundColor: '#efefef'
       }}
-    >
-      <PageTitle title={t("留言")} />
-    </div>
+    ></div>
   );
 };
 

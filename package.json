@@ -20,8 +20,10 @@
     ]
   },
   "dependencies": {
+    "@ant-design/icons": "^4.8.0",
     "antd": "5.0.0",
     "aplayer": "^1.10.1",
+    "classnames": "^2.3.2",
     "i18next": "^22.0.6",
     "mockjs": "^1.1.0",
     "react": "17.x",

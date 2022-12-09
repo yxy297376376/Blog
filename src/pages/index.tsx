@@ -6,9 +6,10 @@ import {
   ContactsFilled,
   MessageFilled,
   WalletFilled,
-  AlignCenterOutlined
+  AlignCenterOutlined,
+  BulbOutlined
 } from "@ant-design/icons";
-import { Drawer, MenuProps, Spin, Row, Col } from "antd";
+import { Drawer, MenuProps, Spin, Row, Col, Divider } from "antd";
 import { AliasToken } from "antd/es/theme/interface";
 import { Breadcrumb, Layout, Menu, ConfigProvider, Segmented } from "antd";
 import styles from "./index.less";
@@ -20,9 +21,9 @@ import ButtomApart from "@/components/ButtomApart";
 import ChangeLanguage from "@/components/ChangeLanguage";
 import { withTranslation } from "react-i18next";
 import "@/lang.js";
-import FastMarquee from "@/components/FastMarquee";
-import InfoCard from "@/components/InfoCard";
+// import FastMarquee from "@/components/FastMarquee";
 import PageTitle from "@/components/PageTitle";
+import DEFAULT_AVATAR from "@/assets/images/avatar.jpg";
 
 type themeProps = number | string;
 
@@ -42,17 +43,13 @@ const IconMapping = [
 const themeToggleOptions = [
   {
     value: "light",
-    icon: <SmileOutlined />
-  },
-  {
-    value: "dark",
-    icon: <FrownOutlined />
+    icon: <BulbOutlined />
   }
 ];
 
 const themeStyle: themeChangeProps = {
   light: {
-    colorPrimary: "#daa520",
+    colorPrimary: "#1677ff",
     colorBgBase: "#fff",
     colorText: "#444",
     colorTextSecondary: "#333",
@@ -60,10 +57,13 @@ const themeStyle: themeChangeProps = {
     colorTextQuaternary: "#999",
     colorTextBase: "#444",
     colorPrimaryText: "#444",
-    colorBgLayout: "rgba(255,255,255,0.1)"
+    colorBgLayout: "rgba(255,255,255,0.1)",
+    colorLink: "#1677ff",
+    colorLinkActive: "#DAA520",
+    colorLinkHover: "#DAA520"
   },
   dark: {
-    colorPrimary: "#333",
+    colorPrimary: "#1677ff",
     colorBgBase: "#000",
     colorText: "#fff",
     colorTextSecondary: "#fff",
@@ -72,14 +72,27 @@ const themeStyle: themeChangeProps = {
     colorTextBase: "#fff",
     colorPrimaryText: "#fff",
     // colorBgContainer: 'rgba(118, 113, 113, 0.48)',
-    colorBgElevated: "rgba(118, 113, 113, 0.68)",
+    colorBgElevated: "rgba(0, 0, 0, 0.8)",
     colorBorder: "rgba(118, 113, 113, 0.68)",
     colorBorderSecondary: "rgba(118, 113, 113, 0.68)",
     colorPrimaryBorder: "#fff",
     colorBgLayout: "rgba(0,0,0,0.1)",
-    colorPrimaryBorderHover: "#fff"
+    colorPrimaryBorderHover: "#fff",
+    colorInfoText: "#fff",
+    colorTextLabel: "#fff",
+    colorFill: "#fff",
+    colorLink: "#1677ff",
+    colorLinkActive: "#DAA520",
+    colorLinkHover: "#DAA520"
   }
 };
+
+const HeaderCover = ({ style }: { style?: React.CSSProperties }) => (
+  <header className={styles["headerCover"]} style={style}>
+    <a>Secret Life Course</a>
+    <a>我从虚幻中惊醒</a>
+  </header>
+);
 
 {
   /*@ts-ignore */
@@ -90,7 +103,6 @@ const App: React.FC = ({ children, t, ...rest }) => {
   const [currentPath, setCurrentPath] = useState("/home");
   const [pageLoading, setLoading] = useState(false);
   const [menuVisible, setMbMenuVisible] = useState(false);
-  const [hideTitle, setHideTitle] = useState(false);
 
   useEffect(() => {
     if (history.location.pathname == "/") {
@@ -112,15 +124,6 @@ const App: React.FC = ({ children, t, ...rest }) => {
     } else {
       localStorage.setItem("isMobile", "0");
     }
-
-    window.addEventListener("resize", function () {
-      if (window.innerWidth < 985) {
-        setHideTitle(true);
-      } else {
-        setHideTitle(false);
-      }
-    });
-    return window.removeEventListener("resize", function () {});
   }, []);
 
   const onCurrentTitle = useMemo(() => {
@@ -141,8 +144,8 @@ const App: React.FC = ({ children, t, ...rest }) => {
     };
   });
 
-  function onChangeTheme(value: themeProps) {
-    setThemeValue(value);
+  function onChangeTheme() {
+    setThemeValue(themeValue == "light" ? "dark" : "light");
   }
 
   function onClickMenu(value: any) {
@@ -164,29 +167,6 @@ const App: React.FC = ({ children, t, ...rest }) => {
       >
         {/* PC菜单 */}
         <div className={styles["stickyHeader"]}>
-          {/* <Header className={styles['header']} style={{
-            background: themeValue == 'light' ? '#fff' : '#444'
-          }}>
-
-
-
-            <div className={styles['right']}>
-
-              <Segmented
-                options={themeToggleOptions}
-                value={themeValue}
-                onChange={onChangeTheme}
-              />
-
-              <ChangeLanguage />
-
-              <InfoCenter style={{
-                marginLeft: 7
-              }} />
-            </div>
-
-          </Header> */}
-
           {/* <FastMarquee text='目前是搭建初始阶段，还在学习中。' style={{
             // minWidth: 300,
             color: '#444',
@@ -198,10 +178,12 @@ const App: React.FC = ({ children, t, ...rest }) => {
         <div className={styles["mobileHeader"]}>
           <div className={styles["flex"]}>
             {/*@ts-ignore */}
-            <Segmented
-              options={themeToggleOptions}
-              value={themeValue}
-              onChange={onChangeTheme}
+            <BulbOutlined
+              onClick={onChangeTheme}
+              style={{
+                fontSize: 18,
+                marginRight: 7
+              }}
             />
             <ChangeLanguage />
           </div>
@@ -228,10 +210,7 @@ const App: React.FC = ({ children, t, ...rest }) => {
           <Layout style={{ padding: "0px 0", minHeight: "100vh" }}>
             <Content className={styles["content"]}>
               <div className={styles["nav"]}>
-                <header className={styles["headerCover"]}>
-                  <div>Secret Life Course</div>
-                  <p>我从虚幻中惊醒</p>
-                </header>
+                <HeaderCover />
                 <Menu
                   mode="vertical"
                   selectedKeys={[currentPath]}
@@ -246,21 +225,20 @@ const App: React.FC = ({ children, t, ...rest }) => {
               </Breadcrumb> */}
               <div className={styles["childrenContent"]}>
                 <div className={styles["opeartion"]}>
-                  <ChangeLanguage />
-                  {/*@ts-ignore */}
-                  <Segmented
-                    options={themeToggleOptions}
-                    value={themeValue}
-                    onChange={onChangeTheme}
-                  />
-                </div>
-                <Spin spinning={pageLoading}>
-                  <PageTitle
-                    title={t(onCurrentTitle)}
+                  <BulbOutlined
+                    onClick={onChangeTheme}
                     style={{
-                      display: hideTitle ? "none" : "block"
+                      fontSize: 18,
+                      marginRight: 7
                     }}
                   />
+                  <ChangeLanguage />
+                  {/*@ts-ignore */}
+                </div>
+                <Spin spinning={pageLoading}>
+                  <div className={styles["PageTitle"]}>
+                    <PageTitle title={t(onCurrentTitle)} />
+                  </div>
                   {children}
                 </Spin>
               </div>
@@ -285,6 +263,18 @@ const App: React.FC = ({ children, t, ...rest }) => {
           className={styles["drawer"]}
           title={t("菜单")}
         >
+          <Row className={styles["headerMb"]}>
+            <HeaderCover
+              style={{
+                textAlign: "center",
+                fontSize: 16
+              }}
+            />
+            <img src={DEFAULT_AVATAR} alt="" />
+          </Row>
+
+          <Divider />
+
           <Row gutter={24} className={styles["mobileMenu"]}>
             {items2.map((v, index) => (
               <Col

@@ -1,28 +1,20 @@
 @font-face {
-  font-family: HAIPAI;
-  src: url("./assets/fonts/HaiPaiQiangDiaoSenXiYuan-Shan\(ShanghaiFace-SenGBT-Flash\)-2.ttf");
-}
-
-@font-face {
-  font-family: HM;
-  src: url("./assets/fonts/HarmonyOS_Sans_SC_Medium.subset.woff2");
-}
-
-@font-face {
   font-family: typewriterblack;
   src: url("./assets/fonts/HarmonyOS_Sans_SC_Medium.subset.woff2");
 }
 
 @font-face {
   font-family: NotoSerif;
-  src: url('http://rluot02vo.hd-bkt.clouddn.com/fonts/Stone-Serif-Sem-ITC-TT-Semi.ttf') format('woff2');
+  src: url("http://rluot02vo.hd-bkt.clouddn.com/fonts/Stone-Serif-Sem-ITC-TT-Semi.ttf")
+    format("woff2");
   font-weight: 600;
-  font-size: 18px
+  font-size: 18px;
 }
 
 @font-face {
   font-family: ZCOOLXiaoWei;
-  src: url('http://rluot02vo.hd-bkt.clouddn.com/fonts/ZCOOLXiaoWei-Regular.ttf') format('woff2');
+  src: url("http://rluot02vo.hd-bkt.clouddn.com/fonts/ZCOOLXiaoWei-Regular.ttf")
+    format("woff2");
 }
 
 @import "~video-react/dist/video-react.css";
@@ -31,12 +23,12 @@
   --text-color: #333;
   --text-gray: #999;
   --light-bg: rgb(242, 242, 242);
-  --light-gray-bg: rgba(0, 0, 0, .05);
-  --gray-bg: rgba(0, 0, 0, .2);
-  --overlay-bg: rgba(255, 255, 255, .95);
+  --light-gray-bg: rgba(0, 0, 0, 0.05);
+  --gray-bg: rgba(0, 0, 0, 0.2);
+  --overlay-bg: rgba(255, 255, 255, 0.95);
   --white-or-black: #fff;
+  --primary-color: #1677ff;
 }
-
 
 // 谷歌、360、QQ浏览器————（ webkit 内核的浏览器 ）
 /*定义滚动条宽高及背景，宽高分别对应横竖滚动条的尺寸*/
@@ -72,6 +64,7 @@ div {
   font-family: NotoSerif, typewriterblack !important;
   --primaryColor: #daa520;
   scroll-behavior: smooth;
+  font-size: 105%;
 }
 
 body {
@@ -93,12 +86,53 @@ h3,
 label {
   font-family: NotoSerif, typewriterblack !important;
   box-sizing: border-box;
-  scroll-behavior: smooth
+  scroll-behavior: smooth;
+}
+
+p {
+  line-height: 1.75;
+}
+
+hr {
+  margin: 2.6em auto;
+  margin-top: 1.7em;
+  border: none;
+  display: block;
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+
+  &::before {
+    color: var(--primary-color);
+    font-weight: 800;
+    font-size: 1.1em;
+    display: block;
+    content: "* * *";
+    text-align: center;
+    letter-spacing: 0.3em;
+  }
+}
+
+ul,
+ol {
+  padding-left: 1.2em !important;
+  line-height: 1.75;
 }
 
 img {
   display: block;
   width: 100%;
+}
+
+@media (max-width: 1200px) {
+  .post-content,
+  .post-content .bracketdown-post {
+    max-width: 100%;
+  }
+}
+
+.ant-layout {
+  transition: background 1s !important;
 }
 
 .ant-segmented,
@@ -154,5 +188,87 @@ img {
 .headerTitle {
   // font-family: ZCOOLXiaoWei !important;
   font-weight: 500;
-  font-size: 24px
+  font-size: 24px;
+}
+
+.post-content h2,
+.comment-content h2 {
+  margin: 1em 0;
+  font-size: 1.28571em;
+  border-left: 0.3em solid var(--primary-color);
+  padding-left: 0.5em;
+  margin-left: -0.8em;
+  line-height: 1;
+  font-weight: 600;
+}
+
+.post-content .bracketdown-post {
+  // border-color: var(--gray-bg);
+  border-width: 2px;
+  padding: 1em 1.5em;
+}
+
+.post-content a,
+.comment-content a {
+  border-bottom: 2px solid var(--light-bg);
+  transition-property: border, opacity, color;
+  box-sizing: border-box;
+  transition: 0.3s;
+
+  &:hover {
+    border-color: var(--primary-color);
+  }
+}
+
+.bracketdown-post {
+  display: block;
+  margin: 1em auto;
+  padding: 0.5em 1.5em;
+  border: 1px solid #ccc;
+  max-width: 75%;
+  width: fit-content;
+
+  .bracketdown-post-title {
+    margin: 0.5em 0;
+    font-size: 1.2em;
+  }
+
+  .bracketdown-post-excerpt {
+    color: #666;
+    font-size: 0.9em;
+  }
+
+  .bracketdown-post-meta {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.post-content .bracketdown-post:hover {
+  transition: border 0.3s;
+  border-color: var(--primary-color);
+  cursor: pointer;
+}
+
+.post-content ul li,
+.comment-content ul li {
+  list-style-type: square;
+}
+
+.comment-closed {
+  padding: 0 0.8em;
+  transition: opacity 0.3s;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  button {
+    border: none;
+    background: transparent;
+    color: var(--text-color);
+    cursor: pointer;
+    user-select: none;
+    font-size: 0.9rem;
+  }
 }

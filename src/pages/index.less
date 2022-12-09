@@ -40,6 +40,10 @@
   .rightContent {
     display: none;
   }
+
+  .PageTitle {
+    display: none;
+  }
 }
 
 @media (min-width: 985px) {
@@ -62,6 +66,10 @@
     .opeartion {
       display: flex !important;
     }
+  }
+
+  .PageTitle {
+    display: block;
   }
 }
 
@@ -86,7 +94,7 @@
     width: 60vw;
     box-shadow: 0 0 1em rgba(0, 0, 0, 0.1);
     position: relative;
-    padding: 50px 20px 20px;
+    padding: 50px 35px 20px;
 
     .opeartion {
       display: flex;
@@ -104,29 +112,38 @@
   position: fixed;
   top: 0;
   left: 0;
+}
 
-  .headerCover {
-    padding-top: 40px;
-    padding-bottom: 40px;
-    padding-right: 13px;
-    border-bottom: none;
-    border-right: 4px solid @primary;
-    // background: rgba(0, 0, 0, 0.05);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-end;
-    margin-top: 20px;
-    margin-bottom: 20px;
+.headerCover {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-right: 13px;
+  border-bottom: none;
+  border-right: 4px solid @primary;
+  // background: rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  margin-top: 20px;
+  margin-bottom: 20px;
 
-    div {
-      font-size: 1.5rem;
-      text-align: right;
-    }
+  a:nth-child(1) {
+    font-size: 1.5rem;
+    text-align: right;
   }
+}
 
-  // display: flex;
-  // justify-content: center;
+.headerMb {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+  img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+  }
 }
 
 .footer {
@@ -150,7 +167,7 @@
 }
 
 .drawer {
-  backdrop-filter: blur(1px);
+  // backdrop-filter: blur(1px);
 
   .mobileMenu {
     padding: 20px;
@@ -158,7 +175,7 @@
 
     .item {
       text-align: center;
-      margin: 5px 0;
+      margin: 15px 0;
       line-height: 1.6;
       font-size: 1.2em;
       cursor: pointer;
