@@ -1,0 +1,40 @@
+{
+  "pages": [
+    {
+      "title": "首页",
+      "path": "/home",
+      "text": ""
+    },
+    {
+      "title": "日志",
+      "path": "/article",
+      "text": ""
+    },
+    {
+      "title": "关于",
+      "path": "/about",
+      "text": ""
+    },
+    {
+      "title": "留言",
+      "path": "/message",
+      "text": ""
+    }
+  ],
+  "posts": [
+    {
+      "categories": [],
+      "date": "2022-11-12",
+      "title": "那个从角落里走过的人",
+      "text": "",
+      "link": "",
+      "tags": [
+        {
+          "name": "mock1",
+          "slug": "怪谈",
+          "permalink": ""
+        }
+      ]
+    }
+  ]
+}

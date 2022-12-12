@@ -1,14 +1,25 @@
 @hoverColor: #daa520;
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
 .postText {
   flex-grow: 1;
   margin-bottom: 40px;
+  animation: fadeIn 1.3s;
 
   .title {
     font-size: 1.2em;
     margin: 0.5em 0;
     font-weight: 500;
-    transition: color .3s;
+    transition: color 0.3s;
 
     &:hover {
       color: @hoverColor;
@@ -19,7 +30,7 @@
   .meta {
     margin-top: 0;
     padding: 0;
-    font-size: .92857em;
+    font-size: 0.92857em;
     display: flex;
   }
 

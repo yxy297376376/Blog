@@ -1,17 +1,28 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
 .itemLink {
   width: 100%;
   border: 2px solid #dddddd;
   box-sizing: border-box;
-  transition: border-color .3s;
+  transition: border-color 0.3s;
   margin-bottom: 1em;
   display: flex;
   align-items: stretch;
   flex-direction: column;
   padding: 1.2em;
+  animation: fadeIn 1.3s;
 
   h2 {
     font-size: 1.3em;
-    transition: color .3s;
+    transition: color 0.3s;
   }
 
   h2,
@@ -26,6 +37,5 @@
     h2 {
       color: #daa520;
     }
-
   }
 }

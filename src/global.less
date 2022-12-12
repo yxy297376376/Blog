@@ -27,7 +27,7 @@
   --gray-bg: rgba(0, 0, 0, 0.2);
   --overlay-bg: rgba(255, 255, 255, 0.95);
   --white-or-black: #fff;
-  --primary-color: #1677ff;
+  --primary-color: #daa520;
 }
 
 // 谷歌、360、QQ浏览器————（ webkit 内核的浏览器 ）
@@ -65,6 +65,7 @@ div {
   --primaryColor: #daa520;
   scroll-behavior: smooth;
   font-size: 105%;
+  animation: 0.5s;
 }
 
 body {
@@ -131,6 +132,20 @@ img {
   }
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  animation: fadeIn 1s;
+}
+
 .ant-layout {
   transition: background 1s !important;
 }
@@ -138,6 +153,12 @@ img {
 .ant-segmented,
 .ant-segmented .ant-segmented-item {
   border-radius: 100vw;
+}
+
+.ant-menu {
+  .ant-menu-item-selected {
+    color: #000;
+  }
 }
 
 .ant-spin {
@@ -197,7 +218,6 @@ img {
   font-size: 1.28571em;
   border-left: 0.3em solid var(--primary-color);
   padding-left: 0.5em;
-  margin-left: -0.8em;
   line-height: 1;
   font-weight: 600;
 }
@@ -270,5 +290,25 @@ img {
     cursor: pointer;
     user-select: none;
     font-size: 0.9rem;
+  }
+}
+
+.bracketdown-block {
+  border: 1px dashed var(--primary-color) !important;
+  position: relative;
+  margin-top: 0.8em;
+  border-radius: 2px;
+  padding: 0.8em;
+
+  &::before {
+    content: "NOTICE";
+    font-size: 0.7em;
+    // color: #fff;
+    position: absolute;
+    top: -0.7em;
+    left: 1.1em;
+    background: var(--primary-color);
+    font-weight: 400;
+    padding: 0 0.5em;
   }
 }

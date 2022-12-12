@@ -44,6 +44,16 @@
   .PageTitle {
     display: none;
   }
+
+  .comment {
+    display: flex;
+    flex-direction: column;
+
+    .comment_item {
+      width: 100% !important;
+      margin: 5px 0;
+    }
+  }
 }
 
 @media (min-width: 985px) {
@@ -95,13 +105,28 @@
     box-shadow: 0 0 1em rgba(0, 0, 0, 0.1);
     position: relative;
     padding: 50px 35px 20px;
+  }
+}
 
-    .opeartion {
-      display: flex;
-      align-items: center;
-      position: absolute;
-      top: 20px;
-      right: 20px;
+.opeartion {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+
+  .item {
+    border-radius: 50%;
+    transition: 0.5s;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      border: none;
+      background-color: var(--primaryColor);
     }
   }
 }
@@ -191,4 +216,88 @@
 .flex {
   display: flex;
   align-items: center;
+}
+
+.comment {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+
+  .comment_item {
+    width: 23%;
+  }
+}
+
+.comment-list {
+  margin-top: 2em;
+  padding-left: 0;
+  font-size: 13px;
+
+  .comment-body:not(.comment-children .comment-body) {
+    border-bottom: 1px solid var(--light-bg);
+    padding-top: 0.2em;
+  }
+
+  .comment-body-inner {
+    display: flex;
+    margin: 1em 0;
+
+    .comment-avatar {
+      width: 40px;
+
+      .avatar {
+        width: 40px;
+        height: 40px;
+        border-radius: 100%;
+        max-width: fit-content;
+      }
+
+      .comment-reply {
+        display: block;
+        text-align: center;
+        margin-top: 0.5em;
+      }
+    }
+
+    .comment-main {
+      padding: 0 1em;
+      display: block;
+      width: 100%;
+
+      .comment-content {
+        display: block;
+
+        p {
+          margin: 0 !important;
+        }
+      }
+
+      .comment-meta {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 12px 0;
+
+        span {
+          display: block;
+          margin-top: 0.2em;
+          margin-right: 5px;
+        }
+      }
+
+      .comment-meta .comment-author a {
+        padding: 0.2em 0.4em;
+        display: inline-block;
+        background: var(--light-bg);
+        border-radius: 2px;
+        line-height: 1;
+        margin-right: 0.5em;
+        white-space: nowrap;
+      }
+    }
+  }
+
+  .comment-children {
+    padding-left: 3.5em;
+  }
 }

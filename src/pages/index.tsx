@@ -37,7 +37,8 @@ const IconMapping = [
   { label: "首页", icon: <HomeFilled />, value: "/home" },
   { label: "日志", icon: <WalletFilled />, value: "/article/list" },
   { label: "关于", icon: <ContactsFilled />, value: "/about" },
-  { label: "留言", icon: <MessageFilled />, value: "/message" }
+  { label: "留言", icon: <MessageFilled />, value: "/message" },
+  { label: "归档", icon: <MessageFilled />, value: "/archive" }
 ];
 
 const themeToggleOptions = [
@@ -49,7 +50,7 @@ const themeToggleOptions = [
 
 const themeStyle: themeChangeProps = {
   light: {
-    colorPrimary: "#1677ff",
+    colorPrimary: "#DAA520",
     colorBgBase: "#fff",
     colorText: "#444",
     colorTextSecondary: "#333",
@@ -58,12 +59,12 @@ const themeStyle: themeChangeProps = {
     colorTextBase: "#444",
     colorPrimaryText: "#444",
     colorBgLayout: "rgba(255,255,255,0.1)",
-    colorLink: "#1677ff",
-    colorLinkActive: "#DAA520",
-    colorLinkHover: "#DAA520"
+    colorLink: "#DAA520",
+    colorLinkActive: "#ff9e00",
+    colorLinkHover: "#ff9e00"
   },
   dark: {
-    colorPrimary: "#1677ff",
+    colorPrimary: "#DAA520",
     colorBgBase: "#000",
     colorText: "#fff",
     colorTextSecondary: "#fff",
@@ -81,9 +82,9 @@ const themeStyle: themeChangeProps = {
     colorInfoText: "#fff",
     colorTextLabel: "#fff",
     colorFill: "#fff",
-    colorLink: "#1677ff",
-    colorLinkActive: "#DAA520",
-    colorLinkHover: "#DAA520"
+    colorLink: "#DAA520",
+    colorLinkActive: "#ff9e00",
+    colorLinkHover: "#ff9e00"
   }
 };
 
@@ -110,11 +111,6 @@ const App: React.FC = ({ children, t, ...rest }) => {
     } else {
       setCurrentPath(location.pathname);
     }
-
-    setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-    }, 500);
   }, [location.pathname]);
 
   useEffect(() => {
@@ -134,7 +130,8 @@ const App: React.FC = ({ children, t, ...rest }) => {
     "/home",
     "/article/list",
     "/about",
-    "/message"
+    "/message",
+    "/archive"
   ].map(icon => {
     return {
       key: icon,
@@ -224,17 +221,6 @@ const App: React.FC = ({ children, t, ...rest }) => {
                 <Breadcrumb.Item>App</Breadcrumb.Item>
               </Breadcrumb> */}
               <div className={styles["childrenContent"]}>
-                <div className={styles["opeartion"]}>
-                  <BulbOutlined
-                    onClick={onChangeTheme}
-                    style={{
-                      fontSize: 18,
-                      marginRight: 7
-                    }}
-                  />
-                  <ChangeLanguage />
-                  {/*@ts-ignore */}
-                </div>
                 <Spin spinning={pageLoading}>
                   <div className={styles["PageTitle"]}>
                     <PageTitle title={t(onCurrentTitle)} />
@@ -243,7 +229,20 @@ const App: React.FC = ({ children, t, ...rest }) => {
                 </Spin>
               </div>
 
-              <div className={styles["rightContent"]}></div>
+              <div className={styles["rightContent"]}>
+                <div className={styles["opeartion"]}>
+                  <BulbOutlined
+                    onClick={onChangeTheme}
+                    style={{
+                      fontSize: 18,
+                      marginRight: 8
+                    }}
+                    className={styles["item"]}
+                  />
+                  <ChangeLanguage className={styles["item"]} />
+                  {/*@ts-ignore */}
+                </div>
+              </div>
             </Content>
             {/*
             <Footer className={styles['footer']}>

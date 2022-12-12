@@ -1,13 +1,14 @@
-declare module '*.css';
-declare module '*.less';
-declare module '*.png';
-declare module '*.jpg';
-declare module '*.svg' {
+declare module "*.css";
+declare module "*.less";
+declare module "*.png";
+declare module "*.jpg";
+declare module "lodash";
+declare module "*.svg" {
   export function ReactComponent(
-    props: React.SVGProps<SVGSVGElement>,
+    props: React.SVGProps<SVGSVGElement>
   ): React.ReactElement;
   const url: string;
   export default url;
 }
-declare module 'video-react';
-declare module 'mockjs'
+declare module "video-react";
+declare module "mockjs";
