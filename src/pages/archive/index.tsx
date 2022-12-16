@@ -3,6 +3,7 @@ import { Typography } from "antd";
 import _ from "lodash";
 import data from "@/assets/json/data.json";
 import TextAnimate from "@/components/Texty";
+import { history } from "umi";
 
 const { Paragraph } = Typography;
 
@@ -16,11 +17,18 @@ const Archive = () => {
       <h2>标签云</h2>
       <Paragraph>
         {tags.map((v: any, index: number) => (
-          <span key={index}># {v.name}</span>
+          <span
+            key={index}
+            style={{
+              margin: "0 3px"
+            }}
+          >
+            # {v.name}
+          </span>
         ))}
       </Paragraph>
 
-      <h2>2022年</h2>
+      <h3>诗集篇</h3>
 
       <ol
         style={{
@@ -34,7 +42,13 @@ const Archive = () => {
               listStyleType: "none"
             }}
           >
-            <a href={v.link}>
+            <a
+              onClick={() => {
+                history.push("/article/detail", {
+                  data: v
+                });
+              }}
+            >
               <span>{v.date}</span> ·{v.title}
             </a>
           </li>

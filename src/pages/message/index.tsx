@@ -4,6 +4,7 @@ import { withTranslation } from "react-i18next";
 import { Input, Form, Button, Modal } from "antd";
 import styles from "../index.less";
 import Author from "@/assets/images/avatar.jpg";
+import TextAnimate from "@/components/Texty";
 
 interface ReplyContentType {
   id: string | number;
@@ -48,9 +49,9 @@ const mockReply = [
 const Comment = () => {
   return (
     <div id="reply">
-      <p>
+      <TextAnimate>
         有什么话都可以在这里告诉我，或者直接给我发邮件。任何内容都可以，只要不违反法律，不发小广告就可以。
-      </p>
+      </TextAnimate>
       <TextArea rows={7} />
 
       <div className={styles["comment"]}>

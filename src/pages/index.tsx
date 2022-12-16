@@ -56,8 +56,8 @@ const themeStyle: themeChangeProps = {
     colorTextSecondary: "#333",
     colorTextTertiary: "#444",
     colorTextQuaternary: "#999",
-    colorTextBase: "#444",
-    colorPrimaryText: "#444",
+    colorTextBase: "#333",
+    colorPrimaryText: "#333",
     colorBgLayout: "rgba(255,255,255,0.1)",
     colorLink: "#DAA520",
     colorLinkActive: "#ff9e00",
@@ -68,9 +68,9 @@ const themeStyle: themeChangeProps = {
     colorBgBase: "#000",
     colorText: "#fff",
     colorTextSecondary: "#fff",
-    colorTextTertiary: "#444",
+    colorTextTertiary: "#b9b9b9",
     colorTextQuaternary: "#999",
-    colorTextBase: "#fff",
+    colorTextBase: "#b9b9b9",
     colorPrimaryText: "#fff",
     // colorBgContainer: 'rgba(118, 113, 113, 0.48)',
     colorBgElevated: "rgba(0, 0, 0, 0.8)",
@@ -222,7 +222,12 @@ const App: React.FC = ({ children, t, ...rest }) => {
               </Breadcrumb> */}
               <div className={styles["childrenContent"]}>
                 <Spin spinning={pageLoading}>
-                  <div className={styles["PageTitle"]}>
+                  <div
+                    className={styles["PageTitle"]}
+                    style={{
+                      display: onCurrentTitle ? "block" : "none"
+                    }}
+                  >
                     <PageTitle title={t(onCurrentTitle)} />
                   </div>
                   {children}

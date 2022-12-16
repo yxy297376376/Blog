@@ -9,6 +9,12 @@ import QueueAnim from "rc-queue-anim";
 import { Parallax } from "rc-scroll-anim";
 import { useEffect } from "react";
 
+const ArticleList = [
+  { label: "随笔", desc: "通常是记录最近发生的事情，或是一些零碎的想法" },
+  { label: "杂谈", desc: "对某些事物的看法" },
+  { label: "文学", desc: "偶尔会写短篇小说和向往诗" },
+  { label: "码农", desc: "对于敲代码的学习/研究记录，或者是自己的作品" }
+];
 const About = () => {
   return (
     <div>
@@ -53,18 +59,11 @@ const About = () => {
         <p key={4}>这个博客的文章主要有以下几个分类</p>
 
         <ul key={5}>
-          <li>
-            <Ga href="">随笔</Ga>：通常是记录最近发生的事情，或是一些零碎的想法
-          </li>
-          <li>
-            <Ga href="">杂谈</Ga>：对某些事物的看法
-          </li>
-          <li>
-            <Ga href="">文学</Ga>：偶尔会写短篇小说和向往诗
-          </li>
-          <li>
-            <Ga href="">码农</Ga>：对于敲代码的学习/研究记录，或者是自己的作品
-          </li>
+          {ArticleList.map(v => (
+            <li className={styles["flex-item"]}>
+              <Ga href="">{v.label}</Ga>：<TextAnimate>{v.desc}</TextAnimate>
+            </li>
+          ))}
         </ul>
 
         <hr />

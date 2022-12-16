@@ -7,20 +7,22 @@ import styles from "./index.less";
 import { Card } from "antd";
 import { history } from "umi";
 import PageTitle from "@/components/PageTitle";
+import { posts } from "@/assets/json/data.json";
 
 const { Meta } = Card;
 
 const Home = () => {
   function onJumpDetail(v: any) {
     history.push("/article/detail", {
-      url: v
+      data: v
     });
   }
+  // {[k7, J3, DARK1, WQ3, PARK1]
 
   return (
     <div className={styles["homePage"]}>
       <div className={styles["content"]}>
-        {[k7, J3, DARK1, WQ3, PARK1].map((v, index) => (
+        {posts.map((v, index) => (
           <Card
             key={index}
             hoverable
@@ -29,13 +31,16 @@ const Home = () => {
             cover={
               <img
                 alt="example"
-                src={v}
-                style={{ objectFit: "cover", height: 140, width: "100%" }}
+                src={v.link}
+                style={{ objectFit: "cover", height: 150, width: "100%" }}
               />
             }
             onClick={() => onJumpDetail(v)}
           >
-            <Meta title="Europe Street beat" description="www.instagram.com" />
+            <Meta
+              title={v.title}
+              description={v.content.substring(0, 45) + "..."}
+            />
           </Card>
         ))}
       </div>
