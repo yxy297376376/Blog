@@ -32,22 +32,19 @@ const About = () => {
         <h2 key={0}>关于本站</h2>
 
         <TextAnimate>
-          为什么博客名字叫做「Secret Life
-          Course」呢？为什么博客名字叫做「Secret」?
-          在我脑子里的印象大概是一个清净的好去处。总之，我希望这个博客能成为互联网上属于我自己一片净土，所以就有了这个名字。
+          为什么博客名字叫做「Secret Life Course」呢？
+          在我脑子里的印象大概是一个清净又神秘的地方。
         </TextAnimate>
 
-        <p key={2}>
-          关于之前的博客，以及这个博客更多的故事，可以阅读这一篇文章：
-        </p>
+        <p key={2}>关于搭建博客，可能是心心念念，但更多的是水到渠成吧。</p>
 
         <div className="bracketdown-post" key={3}>
           <TextAnimate className="bracketdown-post-title" duration={1000}>
-            请重新认识我——杨舒
+            当时只道是寻常
           </TextAnimate>
           <p className="bracketdown-post-excerpt">
-            时隔三年多，我又一次看到了这句话。 &gt; 如果您看到这篇文章,表示您的
-            blog 已经安装成功. 搭建博客的原因很简单：**一片互联网净土。**
+            &gt; 如果您看到这篇文章,表示我的 blog 已经搭建完成. <br />{" "}
+            搭建博客的原因很简单：**一片互联网净土。**
           </p>
 
           <p className="bracketdown-post-meta">
@@ -70,8 +67,7 @@ const About = () => {
 
         <h2 key={6}>关于我</h2>
         <p>
-          我算是一个前端工程师
-          ，你现在看到的博客主题就是我写的。学了这么几年也倒腾出来了一些稍微有用一点的东西，你可以到我的
+          一个前端工程师。学了这些年也倒腾出来了一些稍微有用一点的东西，你可以到我的
           <Ga href="https://github.com/yxy297376376">GitHub 页面</Ga>查看。
         </p>
 

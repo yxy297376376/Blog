@@ -36,6 +36,7 @@ const { Header, Content, Footer } = Layout;
 const IconMapping = [
   { label: "首页", icon: <HomeFilled />, value: "/home" },
   { label: "日志", icon: <WalletFilled />, value: "/article/list" },
+  { label: "DETAIL", icon: <WalletFilled />, value: "/article/detail" },
   { label: "关于", icon: <ContactsFilled />, value: "/about" },
   { label: "留言", icon: <MessageFilled />, value: "/message" },
   { label: "归档", icon: <MessageFilled />, value: "/archive" }
@@ -224,9 +225,9 @@ const App: React.FC = ({ children, t, ...rest }) => {
                 <Spin spinning={pageLoading}>
                   <div
                     className={styles["PageTitle"]}
-                    style={{
-                      display: onCurrentTitle ? "block" : "none"
-                    }}
+                    // style={{
+                    //   display: onCurrentTitle ? "block" : "none"
+                    // }}
                   >
                     <PageTitle title={t(onCurrentTitle)} />
                   </div>

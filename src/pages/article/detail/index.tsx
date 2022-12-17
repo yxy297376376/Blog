@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { getDetails } from "@/serives/api";
 import { Typography, Spin } from "antd";
 import styles from "./index.less";
+import PageTitle from "@/components/PageTitle";
+import GTitle from "@/components/GTitle";
 
 type NormalType = string | number;
 
@@ -42,8 +44,8 @@ const ArticleDetail = ({ location }: { location: any }) => {
           }}
         ></img>
 
-        <Title level={3}>{data?.title}</Title>
-        <Title level={5}>{data?.create_time}</Title>
+        <PageTitle title={data.title} />
+        <p className={styles["date"]}>{data?.date}</p>
 
         <Paragraph>
           <div
@@ -55,8 +57,15 @@ const ArticleDetail = ({ location }: { location: any }) => {
         </Paragraph>
       </Typography>
       <Typography>
-        <Title level={5}>创作背景</Title>
-        <Paragraph>{data.text}</Paragraph>
+        <GTitle
+          title="写作背景"
+          style={{
+            fontSize: 16
+          }}
+        />
+        <Paragraph>
+          <div className={styles["text"]}>{data.text}</div>
+        </Paragraph>
         <br />
         <br />
         <br />

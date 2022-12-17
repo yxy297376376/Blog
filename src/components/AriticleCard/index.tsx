@@ -12,7 +12,7 @@ export default ({ data }: { data?: any }) => {
       <ul className={styles["meta"]}>
         <li>10 天前</li>
         <li>小说</li>
-        <li>184 次阅读</li>
+        <li>0次阅读</li>
         <li>2 评论</li>
       </ul>
       <div className={styles["content"]}>
