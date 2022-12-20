@@ -1,10 +1,11 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { getDetails } from "@/serives/api";
 import { Typography, Spin } from "antd";
 import styles from "./index.less";
 import PageTitle from "@/components/PageTitle";
 import GTitle from "@/components/GTitle";
-
+import { AudioPlayer } from "@/components/APlayer";
+import { useUnmount } from "ahooks";
 type NormalType = string | number;
 
 interface DetailProps {
@@ -56,6 +57,9 @@ const ArticleDetail = ({ location }: { location: any }) => {
           ></div>
         </Paragraph>
       </Typography>
+
+      {data.audio && <AudioPlayer audio={data?.audio || []} />}
+
       <Typography>
         <GTitle
           title="写作背景"

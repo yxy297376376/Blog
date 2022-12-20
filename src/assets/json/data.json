@@ -36,6 +36,15 @@
           "slug": "雨夜",
           "permalink": ""
         }
+      ],
+      "audio": [
+        {
+          "name": "忽然之间",
+          "artist": "莫文蔚",
+          "cover": "https://gimg3.baidu.com/yule/src=http%3A%2F%2Fgips2.baidu.com%2Fit%2Fu%3D2844852512%2C1547101124%26fm%3D3007%26app%3D3007%26f%3DPNG%3Fw%3D500%26h%3D500&refer=http%3A%2F%2Fwww.baidu.com&app=2019&size=w931&n=0&g=0n&q=75&fmt=auto?sec=1671642000&t=6b60a8c561d19bf18f926fc2d417ac52",
+          "url": "http://rluot02vo.hd-bkt.clouddn.com/songs/%E5%BF%BD%E7%84%B6%E4%B9%8B%E9%97%B4-%E8%8E%AB%E6%96%87%E8%94%9A.mp3",
+          "lrc": "https://music.y444.cn/api/v1/search/lyric/lrc?id=277759&src=wyy&name=%E5%BF%BD%E7%84%B6%E4%B9%8B%E9%97%B4-%E8%8E%AB%E6%96%87%E8%94%9A"
+        }
       ]
     },
     {
@@ -51,6 +60,16 @@
           "name": "自由",
           "slug": "",
           "permalink": ""
+        }
+      ],
+      "audio": [
+        {
+          "name": "就是爱你",
+          "artist": "陶喆",
+          "cover": "https://gimg4.baidu.com/poster/src=http%3A%2F%2Ft13.baidu.com%2Fit%2Fu%3D15360430537770639738%2C3484688152982422197%26fm%3D3008%26app%3D3011%26f%3DJPEG&refer=http%3A%2F%2Fwww.baidu.com&app=2004&size=f242,182&n=0&g=0n&q=100?sec=1669805711&t=f99b9f44eae60b10c732a894591e72d7",
+          "url": "http://rluot02vo.hd-bkt.clouddn.com/songs/%E5%B0%B1%E6%98%AF%E7%88%B1%E4%BD%A0.mp3",
+          "lrc": "http://rluot02vo.hd-bkt.clouddn.com/songs/%E5%B0%B1%E6%98%AF%E7%88%B1%E4%BD%A0-%E9%99%B6%E5%96%86.lrc",
+          "theme": "pink"
         }
       ]
     },
@@ -68,6 +87,15 @@
           "slug": "怪谈",
           "permalink": ""
         }
+      ],
+      "audio": [
+        {
+          "name": "窃听风吟",
+          "artist": "朴树",
+          "cover": "https://p1.music.126.net/IwEI0tFPh4w9OjY6RM2IJQ==/109951163009071893.jpg?param=130y130",
+          "url": "https://m804.music.126.net/20221220203033/f0828a5d7050296da86bfd19ce0bc501/jdymusic/obj/wo3DlMOGwrbDjj7DisKw/17090942784/16b0/f17f/abbe/cd6d3bda38b40167963ed2e8c2168973.mp3?_=000001852f6cbda9170c0aaba3738976",
+          "lrc": "https://music.y444.cn/api/v1/search/lyric/lrc?id=139359&src=wyy&name=%E4%B8%94%E5%90%AC%E9%A3%8E%E5%90%9F-%E6%9C%B4%E6%A0%91"
+        }
       ]
     },
     {
@@ -83,6 +111,15 @@
           "name": "远行 送别",
           "slug": "远行",
           "permalink": ""
+        }
+      ],
+      "audio": [
+        {
+          "name": "让我偷偷看你",
+          "artist": "赵雷",
+          "cover": "https://p1.music.126.net/pksSYxP3e_HkbX7zwPvxjg==/7841716930323893.jpg?param=130y130",
+          "url": "http://rluot02vo.hd-bkt.clouddn.com/songs/%E8%AE%A9%E6%88%91%E5%81%B7%E5%81%B7%E7%9C%8B%E4%BD%A0-%E8%B5%B5%E9%9B%B7.mp3",
+          "lrc": "https://music.y444.cn/api/v1/search/lyric/lrc?id=33166602&src=wyy&name=%E8%AE%A9%E6%88%91%E5%81%B7%E5%81%B7%E7%9C%8B%E4%BD%A0-%E8%B5%B5%E9%9B%B7"
         }
       ]
     },
@@ -100,6 +137,15 @@
           "slug": "",
           "permalink": ""
         }
+      ],
+      "audio": [
+        {
+          "name": "See You Again",
+          "artist": "Wiz Khalifa、Charlie Puth",
+          "cover": "https://p4.music.126.net/AuE9HT1fBoRvT23II8Brzw==/109951166715465943.jpg",
+          "url": "http://rluot02vo.hd-bkt.clouddn.com/songs/see%20you%20again.mp3",
+          "lrc": "https://music.y444.cn/api/v1/search/lyric/lrc?id=30953009&src=wyy&name=See%20You%20Again-Wiz%20Khalifa%E3%80%81Charlie%20Puth"
+        }
       ]
     },
     {
@@ -115,6 +161,15 @@
           "name": "枫叶 晚秋",
           "slug": "小巷",
           "permalink": ""
+        }
+      ],
+      "audio": [
+        {
+          "name": "轻微",
+          "artist": "赛宁",
+          "cover": "https://bkimg.cdn.bcebos.com/pic/4e4a20a4462309f790527762465b1bf3d7ca7bcb783f?x-bce-process=image/resize,m_lfit,w_536,limit_1",
+          "url": "http://rluot02vo.hd-bkt.clouddn.com/songs/%E8%BD%BB%E5%BE%AE-%E5%A1%9E%E5%AE%81.mp3",
+          "lrc": "https://music.y444.cn/api/v1/search/lyric/lrc?id=289016&src=wyy&name=%E8%BD%BB%E5%BE%AE-%E5%A1%9E%E5%AE%81"
         }
       ]
     },
@@ -132,6 +187,15 @@
           "slug": "",
           "permalink": ""
         }
+      ],
+      "audio": [
+        {
+          "name": "连名带姓",
+          "artist": "张惠妹",
+          "cover": "https://bkimg.cdn.bcebos.com/smart/6a600c338744ebf…_1,color_ffffff?x-bce-process=image/format,f_auto",
+          "url": "http://rluot02vo.hd-bkt.clouddn.com/songs/%E8%BF%9E%E5%90%8D%E5%B8%A6%E5%A7%93-%E5%BC%A0%E6%83%A0%E5%A6%B9.mp3",
+          "lrc": "https://music.y444.cn/api/v1/search/lyric/lrc?id=522352195&src=wyy&name=%E8%BF%9E%E5%90%8D%E5%B8%A6%E5%A7%93-%E5%BC%A0%E6%83%A0%E5%A6%B9"
+        }
       ]
     },
     {
@@ -147,6 +211,15 @@
           "name": "雨伞 雷雨",
           "slug": "初夏",
           "permalink": ""
+        }
+      ],
+      "audio": [
+        {
+          "name": "安琪",
+          "artist": "许嵩",
+          "cover": "https://p2.music.126.net/VUtLfAqLDYMn2dfy0qlRkw==/109951166118678136.jpg?param=130y130",
+          "url": "http://rluot02vo.hd-bkt.clouddn.com/songs/%E5%AE%89%E7%90%AA-%E8%AE%B8%E5%B5%A9.mp3",
+          "lrc": "https://music.y444.cn/api/v1/search/lyric/lrc?id=167775&src=wyy&name=%E5%AE%89%E7%90%AA-%E8%AE%B8%E5%B5%A9"
         }
       ]
     }

@@ -256,7 +256,6 @@ const App: React.FC = ({ children, t, ...rest }) => {
             </Footer> */}
           </Layout>
         </Content>
-        <AplayerCpt theme={themeValue} />
         <ButtomApart />
 
         {/* 移动端菜单 */}
