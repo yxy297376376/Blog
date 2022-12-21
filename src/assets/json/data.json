@@ -167,7 +167,7 @@
         {
           "name": "轻微",
           "artist": "赛宁",
-          "cover": "https://bkimg.cdn.bcebos.com/pic/4e4a20a4462309f790527762465b1bf3d7ca7bcb783f?x-bce-process=image/resize,m_lfit,w_536,limit_1",
+          "cover": "https://img14.360buyimg.com/pop/jfs/t1/157859/22/25253/65770/61cc8096E38de8721/2309bd3eb821ac3a.jpg",
           "url": "http://rluot02vo.hd-bkt.clouddn.com/songs/%E8%BD%BB%E5%BE%AE-%E5%A1%9E%E5%AE%81.mp3",
           "lrc": "https://music.y444.cn/api/v1/search/lyric/lrc?id=289016&src=wyy&name=%E8%BD%BB%E5%BE%AE-%E5%A1%9E%E5%AE%81"
         }
@@ -190,11 +190,11 @@
       ],
       "audio": [
         {
-          "name": "连名带姓",
-          "artist": "张惠妹",
-          "cover": "https://bkimg.cdn.bcebos.com/smart/6a600c338744ebf…_1,color_ffffff?x-bce-process=image/format,f_auto",
-          "url": "http://rluot02vo.hd-bkt.clouddn.com/songs/%E8%BF%9E%E5%90%8D%E5%B8%A6%E5%A7%93-%E5%BC%A0%E6%83%A0%E5%A6%B9.mp3",
-          "lrc": "https://music.y444.cn/api/v1/search/lyric/lrc?id=522352195&src=wyy&name=%E8%BF%9E%E5%90%8D%E5%B8%A6%E5%A7%93-%E5%BC%A0%E6%83%A0%E5%A6%B9"
+          "name": "怪你过分美丽",
+          "artist": "张国荣",
+          "cover": "https://img0.baidu.com/it/u=1299074596,2604011890&fm=253&fmt=auto&app=120&f=JPEG?w=640&h=569",
+          "url": "http://rluot02vo.hd-bkt.clouddn.com/songs/%E6%80%AA%E4%BD%A0%E8%BF%87%E4%BB%BD%E7%BE%8E%E4%B8%BD-%E5%BC%A0%E5%9B%BD%E8%8D%A3.mp3",
+          "lrc": "https://music.y444.cn/api/v1/search/lyric/lrc?id=982369&src=kw&name=%E6%80%AA%E4%BD%A0%E8%BF%87%E4%BB%BD%E7%BE%8E%E4%B8%BD-%E5%BC%A0%E5%9B%BD%E8%8D%A3"
         }
       ]
     },

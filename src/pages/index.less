@@ -105,6 +105,14 @@
     box-shadow: 0 0 1em rgba(0, 0, 0, 0.1);
     position: relative;
     padding: 50px 35px 20px;
+    min-height: 100vh;
+
+    :global {
+      .ant-spin-nested-loading,
+      .ant-spin-container {
+        height: 100%;
+      }
+    }
   }
 }
 

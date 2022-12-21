@@ -1,18 +1,16 @@
-// import Dplayer from "@/components/Dplay";
-// import InfoCard from "@/components/InfoCard";
-import WritingLine from "./components/WritingLine";
 import styles from "./index.less";
 import Nav from "./components/Nav";
 import ArticleList from "./components/ArticleList";
 import Footer from "@/components/Footer";
-import PageTitle from "@/components/PageTitle";
+import AutoPlayIMG from "@/components/AutoPlayIMG";
+
 const Home = () => {
   return (
     <>
-      <Nav />
+      <AutoPlayIMG />
+      {/* <Nav /> */}
       <ArticleList />
       <Footer />
-      {/* <WritingLine /> */}
     </>
   );
 };

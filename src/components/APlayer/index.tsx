@@ -65,7 +65,7 @@ export const AudioPlayer = forwardRef(({ audio }: AudioType, ref) => {
   const options = {
     container: document.querySelector("#music"),
     loop: "all",
-    volume: 0.4,
+    volume: 0.3,
     mutex: true,
     audio: audio,
     lrcType: 3,

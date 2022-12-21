@@ -36,7 +36,7 @@ export default () => {
       <GTitle title="诗集" />
       <Row gutter={24}>
         {dataSource.map((v, index) => (
-          <Col xs={24} sm={12} md={8} lg={8} xl={6} xxl={4} key={v.id}>
+          <Col xs={24} sm={12} md={8} lg={8} xl={6} xxl={6} key={v.id}>
             <IndexLink data={v} />
           </Col>
         ))}
