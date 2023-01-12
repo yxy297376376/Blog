@@ -24,6 +24,7 @@ import "@/lang.js";
 // import FastMarquee from "@/components/FastMarquee";
 import PageTitle from "@/components/PageTitle";
 import DEFAULT_AVATAR from "@/assets/images/avatar.jpg";
+import RightMenu from "@/components/RightMenu";
 
 type themeProps = number | string;
 
@@ -248,6 +249,7 @@ const App: React.FC = ({ children, t, ...rest }) => {
                   <ChangeLanguage className={styles["item"]} />
                   {/*@ts-ignore */}
                 </div>
+                <RightMenu />
               </div>
             </Content>
             {/*
