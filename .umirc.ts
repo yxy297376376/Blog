@@ -16,7 +16,7 @@ export default defineConfig({
   dynamicImport: {
     loading: "@/Loading"
   },
-  favicon: "http://rluot02vo.hd-bkt.clouddn.com/images/Beach%20Cabana.ico",
+  favicon: "http://cdn.boyxy.cn/images/Beach%20Cabana.ico",
   hash: true,
   ignoreMomentLocale: true,
   // lessLoader: { javascriptEnabled: true },

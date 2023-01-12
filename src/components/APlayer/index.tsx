@@ -2,6 +2,7 @@ import React, {
   forwardRef,
   useEffect,
   useImperativeHandle,
+  useMemo,
   useRef
 } from "react";
 // @ts-ignore
@@ -12,6 +13,7 @@ import { songs } from "@/utils/data";
 import { Button } from "antd";
 import { useLocation } from "dva";
 import { useUnmount } from "ahooks";
+import ColumnGroup from "antd/es/table/ColumnGroup";
 
 interface Iprops {
   theme?: string | number;
@@ -56,22 +58,30 @@ interface AudioType {
 
 export const AudioPlayer = forwardRef(({ audio }: AudioType, ref) => {
   const MinusCircleFilled = useRef<any>();
-  const location = useLocation();
+  // const location = useLocation();
 
   useImperativeHandle(ref, () => ({
     instance: MinusCircleFilled.current
   }));
 
-  const options = {
-    container: document.querySelector("#music"),
-    loop: "all",
-    volume: 0.3,
-    mutex: true,
-    audio: audio,
-    lrcType: 3,
-    theme: "#000",
-    autoplay: true
-  };
+  const options = useMemo(
+    () => ({
+      container: document.querySelector("#music"),
+      loop: "all",
+      volume: 0.3,
+      mutex: true,
+      audio: audio,
+      lrcType: 3,
+      theme: "#000",
+      autoplay: true
+    }),
+    [audio]
+  );
+
+  useEffect(() => {
+    MinusCircleFilled.current?.list.remove(0);
+    MinusCircleFilled.current?.list.add(audio);
+  }, [audio]);
 
   function onInit(e: any) {
     MinusCircleFilled.current = e;
