@@ -19,11 +19,9 @@ const mockData = (start: number) => {
   for (var i = start; i < end; i++) {
     let data: any = {};
     data.id = "mock-" + i;
-    data.title =
-      images[i < images.length - 1 ? i : i % (images.length - 1)].name;
+    data.title = images[i < images.length ? i - 1 : i % images.length].name;
     // data.image = Dummy.src(500, 400);
-    data.image =
-      images[i < images.length - 1 ? i : i % (images.length - 1)].src;
+    data.image = images[i < images.length ? i : i % images.length].src;
     data.content = Dummy.text(20, 60);
     data.collapsed = true;
     datas.push(data);
@@ -34,7 +32,7 @@ const mockData = (start: number) => {
 const Masonrys = () => {
   const [breakpointColumnsObj, setBreakpoint] = useState({
     default: 3,
-    1400: 4,
+    1400: 3,
     1100: 3,
     700: 2,
     500: 1
@@ -89,7 +87,11 @@ const Masonrys = () => {
           {item.collapsed ? (
             <>
               <div style={{ position: "relative" }} className={styles["gitem"]}>
-                <img src={item.image} style={{ width: "100%" }} />
+                <img
+                  src={item.image}
+                  style={{ width: "100%" }}
+                  loading="lazy"
+                />
                 <div className={styles["baseinfo"]}>2312312</div>
               </div>
               <div>{item.content}</div>

@@ -3,7 +3,7 @@ import { Divider, Tag } from "antd";
 
 const RightMenu = () => {
   return (
-    <div className={styles["right-menu"]}>
+    <div className={styles["right-menu"]} id="rightContent">
       <div className={styles["base-info"]}>
         <div className={styles["sidebar-info-img"]}>
           <div
@@ -26,15 +26,12 @@ const RightMenu = () => {
           <div className={styles["sidebar-module-title"]}>最新回复</div>
           <a>
             <li className={styles["dui-list-item"]}>Bhao: 新年快乐哦！！！</li>
-            <li className={styles["dui-list-item"]}>Bhao: 新年快乐哦！！！</li>
-            <li className={styles["dui-list-item"]}>Bhao: 新年快乐哦！！！</li>
-            <li className={styles["dui-list-item"]}>Bhao: 新年快乐哦！！！</li>
-            <li className={styles["dui-list-item"]}>Bhao: 新年快乐哦！！！</li>
+            <li className={styles["dui-list-item"]}>Bhao: Hello</li>
           </a>
         </ul>
       </div>
       <div className={styles["tags"]}>
-        <div className={styles["sidebar-module-title"]}>最新回复</div>
+        <div className={styles["sidebar-module-title"]}>标签</div>
         <div className={styles["content"]}>
           <Tag color="#f50">#f50</Tag>
           <Tag color="#2db7f5">#2db7f5</Tag>

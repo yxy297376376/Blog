@@ -9,7 +9,7 @@ import {
   AlignCenterOutlined,
   BulbOutlined
 } from "@ant-design/icons";
-import { Drawer, MenuProps, Spin, Row, Col, Divider } from "antd";
+import { Drawer, MenuProps, Spin, Row, Col, Divider, Button } from "antd";
 import { AliasToken } from "antd/es/theme/interface";
 import { Breadcrumb, Layout, Menu, ConfigProvider, Segmented } from "antd";
 import styles from "./index.less";
@@ -25,6 +25,7 @@ import "@/lang.js";
 import PageTitle from "@/components/PageTitle";
 import DEFAULT_AVATAR from "@/assets/images/avatar.jpg";
 import RightMenu from "@/components/RightMenu";
+import $ from "jquery";
 
 type themeProps = number | string;
 
@@ -208,7 +209,7 @@ const App: React.FC = ({ children, t, ...rest }) => {
         <Content style={{ position: "relative" }}>
           <Layout style={{ padding: "0px 0", minHeight: "100vh" }}>
             <Content className={styles["content"]}>
-              <div className={styles["nav"]}>
+              <div className={styles["nav"]} id="nav">
                 <HeaderCover />
                 <Menu
                   mode="vertical"
@@ -238,6 +239,18 @@ const App: React.FC = ({ children, t, ...rest }) => {
 
               <div className={styles["rightContent"]}>
                 <div className={styles["opeartion"]}>
+                  <div
+                    className={styles["item"]}
+                    style={{
+                      marginRight: 7
+                    }}
+                    onClick={() => {
+                      $("#nav").fadeToggle();
+                      $("#rightContent").fadeToggle();
+                    }}
+                  >
+                    纯
+                  </div>
                   <BulbOutlined
                     onClick={onChangeTheme}
                     style={{

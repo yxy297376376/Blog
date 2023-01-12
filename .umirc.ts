@@ -16,7 +16,7 @@ export default defineConfig({
   dynamicImport: {
     loading: "@/Loading"
   },
-  favicon: "http://cdn.boyxy.cn/images/Beach%20Cabana.ico",
+  favicon: "http://cdn.boyxy.cn/images/Yea.ico",
   hash: true,
   ignoreMomentLocale: true,
   // lessLoader: { javascriptEnabled: true },
@@ -24,7 +24,7 @@ export default defineConfig({
   // publicPath: '/',
   // runtimePublicPath: true,
   // theme: {},
-  title: "Secret Life Course",
+  title: "自由与希望的交界处",
   // exportStatic: {
   //   htmlSuffix: true
   // },
